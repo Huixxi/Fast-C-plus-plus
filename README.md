@@ -1,2 +1,24 @@
-# Fast-C++
 ![Source: https://www.geeksforgeeks.org/c-plus-plus/](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/images/c_plusplus.png)
+# A Fast C++ Tutorial For Beginners.
+C++ is a very important programming language, even though python is really hot in today's AI context.
+
+## Introduction.
+This is a basic tutorial of C++ for beginners. From **Basic Datatypes** to **Standard Template Library(STL)**.   
+It is mainly based on [Derek Banas's C++ Video Tutorial][1] and book [C++ in One Hour a Day, Sams Teach Yourself(8th Edition)][2].
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1]: https://www.youtube.com/playlist?list=PLGLfVvz_LVvQ9S8YSV0iDsuEU8v11yP9M
+[2]: https://www.amazon.com/One-Hour-Sams-Teach-Yourself/dp/0789757745/ref=as_li_ss_tl?ie=UTF8&qid=1520641767&sr=8-9&keywords=C++&linkCode=sl1&tag=nethta-20&linkId=4bddb996d7f5ff86f0fbaf4647594d32
+
