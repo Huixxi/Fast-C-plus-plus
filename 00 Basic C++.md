@@ -522,5 +522,4 @@ int main()
 void functions_below(const string &name, int age){
     cout << "Hello " << name << "you are" << age;
 }
-
-
+```
