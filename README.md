@@ -14,6 +14,16 @@ It is mainly based on [Derek Banas's C++ Video Tutorial][1] and book [C++ in One
 ## Trouble Shoot During Clion Installation
 Error after you type in you username and password: `Can not connect to the remove sever, ...`, then you should edit your hosts file(`/etc/hosts` on Linux) to comment the urls that related to `JetBrains`.
 
+## Hello World!
+``` c++
+#include <iostream>
+
+int main(){
+
+  std::cout << "Hello World!" << std::endl;
+  return 0;
+}
+```
 
 
 
