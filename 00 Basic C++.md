@@ -137,7 +137,6 @@ int arrays(){
 // If we want to execute the function, we should 'calling it' in main function.
 // function with parameters.
 void functions_above(string name, int age){
-
     cout << "Hello " << name << "you are" << age;
 }
 
@@ -147,7 +146,7 @@ double return_statement(double num){
     //cube
     double result = num * num * num;
 
-    return result;  // get a doubel type value back;
+    return result;  // get a double type value back;
 }
 
 /* ------------If_Else------------ */
@@ -470,48 +469,40 @@ public:
 };
 
 
-// declaration statement for the functions defined below the main function.
+// declaration for the functions defined below the main function.
 void functions_below(const string &name, int age);
 
 int main()
 {
-    // there is no need a statement when we define the function above the main function.
-    // but if we define the function below the main funcion, we then need a declare statement, like:
+    // there is no need a declaration when we define the function above the main function.
+    // but if we define the function below the main funcion, we then need a declaration statement:
    
     functions_above("Mike", 60);  // This tells c++ that I want to execute all of the codes that inside this function;
     functions_below("Tom", 45);
     functions_below("Jim", 13);
 
-    cout<<"Hello, World!"<<endl;
-
     // Classes and Objects
     Book book1;  // create an instance
-
     cout << book1.pages;
 
     Book book2;  // create an instance
     book1.title = "Lord of the Ring";
     book1.author = "Tolkein";
     book1.pages = 700;
-
     cout << book2.pages;
 
     Book book3("Harry Potter", "JK Rowling", 500);
-
     cout << book3.pages;
 
     // Object Functions
     Student student1("Jim", "Business", 2.4);
     Student student2("Pam", "Art", 3.6);
-
     cout << student1.hasHonors();
     cout << student2.hasHonors();
 
     // Getter & Setters
     Movie avengers("The Avenagers", "Joss Whedon", "PG-13");
-
     avengers.setRating("R");
-
     cout << avengers.getRating();
 
     // Inheritance
@@ -529,9 +520,7 @@ int main()
 
 /* ----------Declaration---------- */
 void functions_below(const string &name, int age){
-
     cout << "Hello " << name << "you are" << age;
-
 }
 
 
