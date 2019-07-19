@@ -12,7 +12,7 @@ It is mainly based on [Derek Banas's C++ Video Tutorial][1] and book [C++ in One
 * Some lightweight tools: [Visual Studio Code, a watered down version of VS](https://code.visualstudio.com/), [Qt Open Source Version](https://www.qt.io/developers/)
 
 ## Trouble Shoot During Clion Installation
-Error after you type in you username and password: `Can not connect to the remove sever, ...`, then you should edit your hosts file(/etc/hosts on Linux) to comment the urls that related to `JetBrains`.
+Error after you type in you username and password: `Can not connect to the remove sever, ...`, then you should edit your hosts file(`/etc/hosts` on Linux) to comment the urls that related to `JetBrains`.
 
 
 
