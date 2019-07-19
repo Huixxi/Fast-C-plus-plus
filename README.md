@@ -24,6 +24,9 @@ int main(){
   return 0;
 }
 ```
+## Tutorial Catalogue
+First, I assume that you have some basic knowledge of C or C++.  
+Before we start, let's walk through the [Basic Introduction About C++] roughly to recall some basic and important points. (All the codes in this introduction are from this tutorial video: https://www.youtube.com/watch?v=vLnPwxZdW4Y, I just sort the video content into text form.)
 
 
 
