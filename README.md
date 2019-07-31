@@ -19,7 +19,6 @@ Error after you type in you username and password: `Can not connect to the remov
 #include <iostream>
 
 int main(){
-
   std::cout << "Hello World!" << std::endl;
   return 0;
 }
