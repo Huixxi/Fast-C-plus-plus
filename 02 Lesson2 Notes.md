@@ -56,7 +56,7 @@ i.e. maybe there is another namespace called `stdddd`, and there is also a `cout
   
   
 ## Function Declaration
-When you define a function under the `main()` function and you want to invoke it in `main()`, you need a *function declaration*:  
+When you define a function under the `main()` function and you want to invoke it in `main()`, then you need a *function declaration* above the `main()` function:  
 ```c++
 #include <iostream>
 int func(int num);  // function declaration
@@ -73,4 +73,16 @@ int func(int num){
 ```
 
 ## CAUTION
-C++ is case-sensitive. So, expect compilation to fail if you write `Int` instead of `int` and `Std::Cout` instead of `std::cout`.
+C++ is case-sensitive. So, expect compilation to fail if you write `Int` instead of `int` and `Std::Cout` instead of `std::cout`.  
+
+Anytime you want to use type `string` inside `main()`, you should include `<string>`:  
+```c++
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(){
+  string name = "Tom";
+  // ...
+}
+```
