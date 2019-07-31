@@ -20,7 +20,8 @@ Preprocessor directives are commands to the preprocessor and always start with a
 The execution of a C++ program always starts here. It is a standardized convention that function `main()` is declared with an `int` preceding it. `int` is the return value type of the function `main()` and stands for integer. Conventionally programmers return 0 in the event of success or –1 in the event of error.
 
 ## The Concept of Namespaces 
-
+Namespaces are names given to parts of code that help in reducing the potential for a **naming conflict**. By invoking `std::cout`, you are telling the compiler to use that one unique `cout` that is available in the `std` namespace.   
+i.e. maybe there is another namespace called `stdddd`, and there is also a `cout` function in it, so that when you just use `cout`, the compiler will be confused that which `cout` you used either `std::cout` or `stdddd::cout`. Then if you tell the compiler that I will `using namespace std`, the compiler will know that the `cout` is `std::cout`.
 
 
 
