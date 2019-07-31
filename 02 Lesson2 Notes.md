@@ -25,25 +25,52 @@ i.e. maybe there is another namespace called `stdddd`, and there is also a `cout
 **There are three ways to use namespace:**  
 * ```c++
   #include <iostream>
-  
   using namespace std;  // That works on all functions.
-  
+  int func(){
+    cout << "balabala";
+  }
   int main(){
+    cout << "balabala";
     // ...
   }
   ```
 * ```c++
   #include <iostream>
-  
-  using namespace std;  // That works on all functions.
-  
+  int func(){
+    cout << "balabala";  // Error, can't use cout directly, must std::cout here.
+  }
   int main(){
+    using namespace std;  // That works only on the main() function.
+    cout << "balabala";
+    // ...
+  }
+  ```
+* ```c++
+  #include <iostream>
+  int main(){
+    using std::cout;  // Only use some specific name;
+    cout << "balabala";
     // ...
   }
   ```
   
+  
+## Function Declaration
+When you define a function under the `main()` function and you want to invoke it in `main()`, you need a *function declaration*:  
+```c++
+#include <iostream>
+int func(int num);  // function declaration
 
-
+int main(){
+  int num = 1;
+  func(num);
+  // ...
+  }
+  
+int func(int num){
+  // ...
+}
+```
 
 ## CAUTION
 C++ is case-sensitive. So, expect compilation to fail if you write `Int` instead of `int` and `Std::Cout` instead of `std::cout`.
