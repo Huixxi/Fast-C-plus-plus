@@ -4,7 +4,7 @@ C++ is a very important programming language, even though python is really hot i
 
 ## Introduction.
 This is a basic tutorial of C++ for beginners. From **Basic Datatypes** to **Standard Template Library(STL)**.   
-It is mainly based on [Derek Banas's C++ Video Tutorial][1] and book [C++ in One Hour a Day, Sams Teach Yourself(8th Edition)][2].
+It is mainly based on the book [C++ in One Hour a Day, Sams Teach Yourself(8th Edition)][2].
 
 ## C++ IDE Recommend
 * [Visual Studio](https://visualstudio.microsoft.com/) is highly recommended if you do c++ development on Windows or Mac. It is free(the community version), and powerful, which is suited to large project development.
