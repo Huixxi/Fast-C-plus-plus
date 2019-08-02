@@ -1,8 +1,9 @@
 # Lesson 3 - Using Variables, Declaring Constants
-**Variables** are tools that help the programmer temporarily store data for a finite amount of time. **Constants** are tools that help the programmer define artifacts that are not allowed to change or make changes.  
+**Variables** are tools that help the programmer temporarily store data for a finite amount of time.   
+**Constants** are tools that help the programmer define artifacts that are not allowed to change or make changes.  
 
 ## Memory and Addressing in Brief 
-All computers, smart phones, and other programmable devices contain a microprocessor and a certain amount of memory for temporary storage called **Random Access Memory (RAM)**. 
+All computers, smart phones, and other programmable devices contain a **microprocessor** and a certain amount of memory for temporary storage called **Random Access Memory (RAM)**. 
 ![](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/images/what_is_ram.png)
 The RAM itself can be considered to be a storage area akin to a row of lockers in the dorms, each locker having a number—that is, an **address**.
 ![](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/images/ram_address.png)
@@ -22,7 +23,7 @@ int firstNumber = 0, secondNumber = 0, multiplicationResult = 0;
 ```
 
 ## Warm Reminder: the Scope of a Variable and Global Variables
-(**Note:** Indiscriminate use of global variables is considered poor pro- gramming practice.)
+(**Note:** Indiscriminate use of global variables is considered poor programming practice.)
 ```c++
 #include <iostream>
 using namespace std;
@@ -79,10 +80,9 @@ const type-name constant-name = value;
 * Constant Expressions Using `constexpr`
 ```c++
 constexpr double GetPi() {return 22.0 / 7;}
-```
-One constexpr can use another:   
+```   
 ```c++
-constexpr double TwicePi() {return 2 * GetPi();}
+constexpr double TwicePi() {return 2 * GetPi();}  // One `constexpr` can use another
 ```
 
 * Enumerations  
@@ -103,4 +103,6 @@ RainbowColors MyFavoriteColor = Blue; // Initial value
 ```
 
 * Defining Constants Using `#define` (But you should never use it)  
-`#define pi 3.14286`
+```c++
+#define pi 3.14286
+```
