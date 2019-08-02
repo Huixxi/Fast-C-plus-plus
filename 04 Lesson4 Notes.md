@@ -1,6 +1,7 @@
 # Lesson 4 - Managing Arrays and Strings
 ## Declaring and Initializing Static Arrays
 `ElementType ArrayName [constant_number of elements] = {optional initial values};`  
+
 **Examples:**  
 ```c++ 
 int myNumbers [5] = {34, 56, -21, 5002, 365};
