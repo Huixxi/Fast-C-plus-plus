@@ -75,6 +75,7 @@ Constants are like variables in C++ except that these cannot be changed. Similar
 ```c++
 const type-name constant-name = value;
 ```
+
 * Constant Expressions Using `constexpr`
 ```c++
 constexpr double GetPi() {return 22.0 / 7;}
@@ -83,7 +84,8 @@ One constexpr can use another:
 ```c++
 constexpr double TwicePi() {return 2 * GetPi();}
 ```
-* Enumerations
+
+* Enumerations  
 There are situations where a particular variable should be allowed to accept only a certain set of values.  
 ```c++
 enum RainbowColors {
@@ -99,5 +101,6 @@ enum RainbowColors {
 RainbowColors MyFavoriteColor = Blue; // Initial value
 ```
 The compiler converts the enumerator such as `Violet` and so on into `integers`.
+
 * Defining Constants Using `#define` (But you should never use it)
 `#define pi 3.14286`
