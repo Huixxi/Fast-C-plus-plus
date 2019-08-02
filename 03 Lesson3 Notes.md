@@ -87,6 +87,7 @@ constexpr double TwicePi() {return 2 * GetPi();}
 
 * Enumerations  
 There are situations where a particular variable should be allowed to accept only a certain set of values.  
+The compiler converts the enumerator such as `Violet` and so on into `integers`.
 ```c++
 enum RainbowColors {
   Violet = 0, // start from 0, you can change it to other number. 
@@ -100,7 +101,6 @@ enum RainbowColors {
 
 RainbowColors MyFavoriteColor = Blue; // Initial value
 ```
-The compiler converts the enumerator such as `Violet` and so on into `integers`.
 
-* Defining Constants Using `#define` (But you should never use it)
+* Defining Constants Using `#define` (But you should never use it)  
 `#define pi 3.14286`
