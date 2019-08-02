@@ -44,6 +44,7 @@ int main(){
 
 ## Common Compiler-Supported C++ Variable Types
 ![From: Book C++ in One Hour a Day, Sams Teach Yourself(8th Edition)](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/images/variable_types.png)
+**Tips:**  
 * Sign Bit: 0: Indicates positive integer; 1: Indicates negative integer.
 * You would use an **unsigned variable type** when you expect only positive values.
 
