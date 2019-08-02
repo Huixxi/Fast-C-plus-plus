@@ -39,7 +39,7 @@ int solarPanels [2][3] = {{0, 1, 2}, {3, 4, 5}};
 cout << solarPanels[0][2];  // row 1, column 3 --> 2
 ```
 
-## Dynamic Arrays
+## Dynamic Arrays - `std::vector`
 ```c++
 #include <iostream>
 #include <vector>
