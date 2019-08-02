@@ -17,7 +17,9 @@ or:
 The `VariableType` attribute tells the compiler ***the nature of data the variable can store***, and the compiler ***reserves the necessary space for it***. The `VariableName` chosen by the programmer is ***a friendly replacement for the address*** in the memory where the variable’s value is stored, **i.e.** a readable name not a confusing address number, the compiler will do the job of mapping the vairable name to a associated memory location.
 
 ## Declaring and Initializing Multiple Variables of a Type
-`int firstNumber = 0, secondNumber = 0, multiplicationResult = 0;`
+```c++
+int firstNumber = 0, secondNumber = 0, multiplicationResult = 0;
+```
 
 ## Warm Reminder: the Scope of a Variable and Global Variables
 (**Note:** Indiscriminate use of global variables is considered poor pro- gramming practice.)
@@ -57,7 +59,9 @@ float someFloat{ 5000000 }; // OK! 5000000 can be accomodated
 
 ## Automatic Type Inference Using `auto`
 Compilers supporting C++11 and beyond give you the option of not having to explicitly specify the variable type when using the keyword `auto`.   
-`auto coinFlippedHeads = true;`
+```c++
+auto coinFlippedHeads = true;
+```
 
  ## Using `typedef` to Substitute a Variable’s Type
  ```c++
@@ -67,6 +71,33 @@ Compilers supporting C++11 and beyond give you the option of not having to expli
  
 ## What Is a Constant?
 Constants are like variables in C++ except that these cannot be changed. Similar to variables, constants also occupy space in the memory and have a name to identify the address where the space is reserved. However, the content of this space cannot be over- written. Constants in C++ can be:  
-* Declaring Variables as Constants Using `const`
-`const type-name constant-name = value;`
-* asdfa
+* Declaring Variables as Constants Using `const`  
+```c++
+const type-name constant-name = value;
+```
+* Constant Expressions Using `constexpr`
+```c++
+constexpr double GetPi() {return 22.0 / 7;}
+```
+One constexpr can use another:   
+```c++
+constexpr double TwicePi() {return 2 * GetPi();}
+```
+* Enumerations
+There are situations where a particular variable should be allowed to accept only a certain set of values.  
+```c++
+enum RainbowColors {
+  Violet = 0, // start from 0, you can change it to other number. 
+  Indigo, 
+  Blue, 
+  Green, 
+  Yellow, 
+  Orange, 
+  Red
+};
+
+RainbowColors MyFavoriteColor = Blue; // Initial value
+```
+The compiler converts the enumerator such as `Violet` and so on into `integers`.
+* Defining Constants Using `#define` (But you should never use it)
+`#define pi 3.14286`
