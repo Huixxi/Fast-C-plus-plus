@@ -56,11 +56,31 @@ int main(){
 }
 ```
 
+## C-style Character Strings
+```c++
+std::cout << "Hello World"; 
 
+char sayHello[] = {'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd', '\0'};
+std::cout << sayHello << std::endl;
+```
+C-style strings are a special case of character arrays in that the last character always precedes the null-terminator `'\0'`. 
+`'\0'` is called the string-terminating character.   
+If you inserted `'\0'` anywhere in the middle of the array, it would not change the size of the array; it would only mean that string-processing using the array as input would stop at that point.   
 
+## C++ Strings: Using `std::string`
+```c++
+#include <iostream> 
+#include <string> 
 
+using namespace std;
 
-
+int main(){
+  string greetString ("Hello std::string!");  // Initialization
+  cout << greetString << endl;
+  cout << greetString.length() << endl;
+  \\ ...
+}
+```
 
 
 
