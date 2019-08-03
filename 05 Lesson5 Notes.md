@@ -40,4 +40,37 @@ And **`++startValue` is preferred over `startValue++`**, because with the postfi
 **Bitwise NOT (`~`), AND (`&`), OR (`|`), and XOR (`^`) Operators**
 
 **Bitwise Right Shift (`>>`) and Left Shift (`<<`) Operators**
+Effectively doubling and quadru- pling the number.  
+```c++
+#include <iostream>
 
+using namespace std;
+
+int main(){
+  int inputNum = 16;
+  int halfNum = inputNum >> 1;
+  int quarterNum = inputNum >> 2;
+
+  int doubleNum = inputNum << 1; 
+  int quadrupleNum = inputNum << 2;
+  
+  cout << "Quarter: " << quarterNum << endl;
+  cout << "Half: " << halfNum << endl; cout << "Double: " << doubleNum << endl;
+  cout << "Quadruple: " << quadrupleNum << endl;
+  return 0;
+}
+
+// Output
+// Quarter: 4 
+// Half: 8 
+// Double: 32 
+// Quadruple: 64
+```
+
+**Compound Assignment Operators**  
+![](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/images/compound_oper.png)
+
+**Using Operator `sizeof` to Determine the Memory Occupied by a Variable**  
+`sizeof (variable);`   
+or:  
+`sizeof (type);`
