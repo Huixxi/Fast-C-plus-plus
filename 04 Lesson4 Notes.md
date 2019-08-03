@@ -51,7 +51,7 @@ int main(){
   
   dynArray[0] = 365;
   dynArray[1] = -421;
-  dynArray[2]= 789;
+  dynArray[2] = 789;
   // ...
 }
 ```
