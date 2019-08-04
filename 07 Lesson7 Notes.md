@@ -99,7 +99,7 @@ A function can return only one value using the return statement. So, if your fun
 
 ## How Function Calls Are Handled by the Microprocessor
 When the microprocessor encounters `CALL`, it saves the position of the instruction to be executed after the function call on the stack and jumps to the memory location contained in the `CALL` instruction.
-> **Understanding the Stack The**
+> **Understanding the Stack**
 ![](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/images/stack.png)
 
 ## Inline Functions
