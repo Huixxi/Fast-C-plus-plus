@@ -36,7 +36,7 @@ value contained in address that contained in numPinter: 3
 **Declaring a Pointer**  
 `PointedType * PointerVariableName;`  
 `PointedType * PointerVariableName = NULL; // initializing value (a better choice)`  
-for example:
+
 ```c++
 int* pointsToInt = NULL;  // initilized with NULL to avoid junk value.
 ```
@@ -49,7 +49,7 @@ cout << &num << endl;
 
 **Using Pointers to Store Addresses**
 `Type* Pointer = &Variable;`
-for example:
+
 ```c++
 int* numPointer = &num;
 ```
@@ -83,7 +83,7 @@ size of double pointer: 8
 ```
 
 ## Dynamic Memory Allocation and Release with `new` and `delete`
-Pointers being variables that are used to contain memory addresses play a critical role in efficient dynamic memory allocation.
+Pointers being variables that are used to contain memory addresses play a critical role in efficient dynamic memory allocation.  
 **`new`**  
 Note that `new` returns a pointer, and that is the reason it is assigned to one.
 `Type* Pointer = new Type; // request memory for one element`  
@@ -146,13 +146,13 @@ The original pointer address returned by `new` during allocation needs to be use
 The value of a const-variable cannot be changed, and therefore it cannot be used as an **l-value**.
 * The address contained in the pointer is constant and cannot be changed, yet the data at that address can be changed:  
 `int* const pDaysInMonth = &daysInMonth;`  
-`*pDaysInMonth = 31; // OK! Data pointed to can be changed`
+`*pDaysInMonth = 31; // OK! Data pointed to can be changed`  
 `pDaysInMonth = &daysInLunarMonth; // Not OK! Cannot change address!`
-* Data pointed to is constant and cannot be changed, yet the address contained in the pointer can be changed—that is, the pointer can also point elsewhere:
+* Data pointed to is constant and cannot be changed, yet the address contained in the pointer can be changed—that is, the pointer can also point elsewhere:  
 `const int* pointsToInt = &hoursInDay;`  
 `pointsToInt = &monthsInYear; // OK!`  
 `*pointsToInt = 13; // Not OK! Cannot change data being pointed to`
-* Both the address contained in the pointer and the value being pointed to are constant and cannot be changed (most restrictive variant):
+* Both the address contained in the pointer and the value being pointed to are constant and cannot be changed (most restrictive variant):  
 `const int* const pHoursInDay = &hoursInDay;`  
 `*pHoursInDay = 25; // Not OK! Cannot change data being pointed to`  
 `pHoursInDay = &daysInMonth; // Not OK! Cannot change address`
@@ -183,7 +183,7 @@ int main() {
 
 ## Similarities between Arrays and Pointers 
 `myNumbers` is a pointer to the first element `myNumbers[0]`.  
-`myNumbers[1]` equals to `* (pointToNums + 1)`. 
+`myNumbers[1]` equals to `*(pointToNums + 1)`. 
 > Note that one can assign an array to a pointer as `int* pointToNums = myNumbers;`, but one cannot assign a pointer to an array. This is because by its very nature, an array like `myNumbers` is static and cannot be used as an **l-value**. myNumbers cannot be modified.
 
 ## Common Programming Mistakes When Using Pointers
@@ -197,9 +197,9 @@ int* pointToNums = new int[5]; // initial allocation
 // make another allocation and overwrite 
 pointToNums = new int[10];  // leaks the previously allocated memory
 ```
-* **When Pointers Don’t Point to Valid Memory Locations**
+* **When Pointers Don’t Point to Valid Memory Locations**  
 Logical as this may seem, invalid pointers are quite a common reason for application crashes.
-* **Dangling Pointers (Also Called Stray or Wild Pointers)**
+* **Dangling Pointers (Also Called Stray or Wild Pointers)**  
 Note that any valid pointer is invalid after it has been released using delete.
 > **DON’T invoke delete on a memory address more than once.**  
 **Q I have two pointers:**  
@@ -208,7 +208,7 @@ Note that any valid pointer is invalid after it has been released using delete.
 Am I not better off calling `delete`   using both to ensure that the memory is gone?  
 **A** That would be wrong. **You are allowed to invoke delete only once on the address returned by new.** Also, you would ideally avoid having two pointers pointing to the same address because **performing `delete` on any one would invalidate the other.** Your program should also not be written in a way that you have any uncertainty about the validity of pointers used.
 
-* **Checking Whether Allocation Request Using new Succeeded**
+* **Checking Whether Allocation Request Using new Succeeded**  
   * Use `try ... catch(bad_alloc) ...`
   * Use `new(nothrow)` which will return `NULL` when failed.
   
