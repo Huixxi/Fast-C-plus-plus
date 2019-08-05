@@ -12,7 +12,7 @@ using namespace std;
 // using std::cout;
 // using std::endl;
 
-int datatypes(){
+int datatypes() {
     char grade = 'A';
     int age = 50;
     double gpa = 2.3;
@@ -22,7 +22,7 @@ int datatypes(){
     return 0;
 }
 
-int working_with_strings(){
+int working_with_strings() {
     string phrase = "Giraffe Academy"; // index start from 0
     phrase[0] = 'A';
     cout << phrase.length() << endl;
@@ -36,8 +36,7 @@ int working_with_strings(){
     return 0;
 }
 
-int working_with_numbers(){
-
+int working_with_numbers() {
     cout << 40;
     cout << 5 - 7;
 
@@ -62,8 +61,7 @@ int working_with_numbers(){
     return 0;
 }
 
-int getting_user_input(){
-
+int getting_user_input() {
     int age;  // get int
     char grade;  // get char
 
@@ -82,8 +80,7 @@ int getting_user_input(){
     return 0;
 }
 
-int building_a_calculator(){
-
+int building_a_calculator() {
     int num1, num2;
     cout << "Enter first number: ";
     cin >> num1;
@@ -96,8 +93,7 @@ int building_a_calculator(){
     return 0;
 }
 
-int building_a_mad_libs_game(){
-
+int building_a_mad_libs_game() {
     string color, pluralNoun, celebrity;
 
     cout << "Enter a color: ";
@@ -114,8 +110,7 @@ int building_a_mad_libs_game(){
     return 0;
 }
 
-int arrays(){
-
+int arrays() {
     int luckyNums[] = {4, 8, 15, 16, 23, 42};  // index start from 0;
 
     cout << luckyNums[0];
@@ -132,22 +127,19 @@ int arrays(){
 
 // If we want to execute the function, we should 'calling it' in main function.
 // function with parameters.
-void functions_above(string name, int age){
-
+void functions_above(string name, int age) {
     cout << "Hello " << name << "you are" << age;
-
 }
 
 // return type: int, char, double,
-double return_statement(double num){
+double return_statement(double num) {
     //cube
     double result = num * num * num;
 
     return result;  // get a doubel type value back;
 }
 
-int if_statements(bool isMale, bool isTall){
-
+int if_statements(bool isMale, bool isTall) {
     if(isMale){
         cout << "You are a male";
     }
@@ -172,7 +164,7 @@ int if_statements(bool isMale, bool isTall){
     return 0;
 }
 
-int more_if_statement(int num1, int num2, int num3){
+int more_if_statement(int num1, int num2, int num3) {
     // getmax
     int result;
 
@@ -193,7 +185,7 @@ int more_if_statement(int num1, int num2, int num3){
     return result;
 }
 
-string switch_statement(int dayNum){
+string switch_statement(int dayNum) {
     // get day of week
     string dayName;
 
@@ -234,60 +226,57 @@ string switch_statement(int dayNum){
 }
 
 
-int while_loops(){
-
+int while_loops() {
     int index = 1;
-    while (index <= 5){
+    while (index <= 5) {
         cout << index << endl;
         index++;
     }
 
-    do{
+    do {
         cout << index << endl;
         index++;
-    }while (index <= 5);
+    } while (index <= 5);
 
     return 0;
 }
 
 
-int building_a_guessing_game(){
-
+int building_a_guessing_game() {
     int secretNum = 7;
     int guess;
     int guessCount = 0;
     int guessLimit = 3;
     bool outOfGuesses = false;
 
-    while (secretNum != guess && !outOfGuesses){
-        if (guessCount < guessLimit){
+    while (secretNum != guess && !outOfGuesses) {
+        if (guessCount < guessLimit) {
             cout << "Enter guess: ";
             cin >> guess;
             guessCount++;
         }
-        else{
+        else {
             outOfGuesses = true;
         }
     }
 
-    if (outOfGuesses){
+    if (outOfGuesses) {
         cout << "You Lose!";
     }
-    else{
+    else {
         cout << "You Win!";
     }
 
     return 0;
 }
 
-int for_loops(){
-
+int for_loops() {
     int nums[] = {1, 2, 5, 7, 3};
-    for (int num : nums){  // use use range based for loop instead
+    for (int num : nums) {  // use use range based for loop instead
         cout << num << endl;
     }
 
-    for (int i = 1; i <= 5; i++){
+    for (int i = 1; i <= 5; i++) {
         cout << i << endl;
     }
 
@@ -295,8 +284,7 @@ int for_loops(){
 }
 
 
-int exponent_function(int baseNum, int powNum){
-
+int exponent_function(int baseNum, int powNum) {
     int result = 1;
     for (int i = 0; i < powNum; i++) {
         result *= baseNum;  // result = result * baseNum;
@@ -306,8 +294,7 @@ int exponent_function(int baseNum, int powNum){
 }
 
 
-int twod_array_nested_loops(){  // nested loop: a loop inside a loop;
-
+int twod_array_nested_loops() {  // nested loop: a loop inside a loop;
     int numberGrid[3][2] = {
             {1, 2},
             {3, 4},
@@ -316,9 +303,9 @@ int twod_array_nested_loops(){  // nested loop: a loop inside a loop;
 
     cout << numberGrid[0][1];
 
-    for (int i = 0; i < 3; i++){
+    for (int i = 0; i < 3; i++) {
         // nested loop
-        for (int j = 0; j < 2; j++){
+        for (int j = 0; j < 2; j++) {
             cout << numberGrid[i][j];
         }
     }
@@ -326,8 +313,7 @@ int twod_array_nested_loops(){  // nested loop: a loop inside a loop;
     return 0;
 }
 
-int comments(){
-
+int comments() {
     // here is a comment, only works on a single line;
 
     /*
@@ -343,7 +329,7 @@ int comments(){
 }
 
 
-int pointers(){
+int pointers() {
 
     int age = 19;
     double gpa = 2.7;
@@ -363,7 +349,7 @@ int pointers(){
 }
 
 // ClassesObjects
-class Book{
+class Book {
     // To represent any objects in real world, we need to create a class(a new data type).
     // book class
 public:
@@ -372,13 +358,13 @@ public:
     int pages;
 
     // Constructor Functions
-    Book(string aTitle, string aAuthor, int aPages){
+    Book(string aTitle, string aAuthor, int aPages) {
         title = move(aTitle);
         author = move(aAuthor);
         pages = aPages;
     }
 
-    Book(){
+    Book() {
         title = "no title";
         author = "no author";
         pages = 0;
@@ -386,30 +372,30 @@ public:
 };
 
 
-class Student{
+class Student {
 public:
     string name;
     string major;
     double gpa;
 
-    Student(string aName, string aMajor, double aGpa){
+    Student(string aName, string aMajor, double aGpa) {
         name = move(aName);
         major = move(aMajor);
         gpa = aGpa;
     }
 
-    bool hasHonors(){
-        if (gpa >= 3.5){
+    bool hasHonors() {
+        if (gpa >= 3.5) {
             return true;
         }
-        else{
+        else {
             return false;
         }
     }
 };
 
 
-class Movie{
+class Movie {
 private:
     string rating;
 
@@ -417,56 +403,55 @@ public:
     string title;
     string director;
 
-    Movie(string aTitle, string aDirector, string aRating){
+    Movie(string aTitle, string aDirector, string aRating) {
         title = move(aTitle);
         director = move(aDirector);
         setRating(move(aRating));
     }
 
-    void setRating(string aRating){
-        if (aRating == "G" || aRating == "PG" || aRating == "PG-13" || aRating == "R"){
+    void setRating(string aRating) {
+        if (aRating == "G" || aRating == "PG" || aRating == "PG-13" || aRating == "R") {
             rating = move(aRating);
         }
-        else{
+        else {
             rating = "NR";
         }
     }
 
-    string getRating(){
+    string getRating() {
         return rating;
     }
 };
 
 
-class Chef{
+class Chef {
 public:
-    void makeChicken(){
+    void makeChicken() {
         cout << "The chef makes chicken" << endl;
     }
-    void makeSalad(){
+    void makeSalad() {
         cout << "The chef makes salad" << endl;
     }
-    void makeSpecialDish(){
+    void makeSpecialDish() {
         cout << "The chef makes bbq ribs" << endl;
     }
 };
 
-class ItalianChef : public Chef{
+class ItalianChef : public Chef {
 public:
-    void makePasta(){
+    void makePasta() {
         cout << "The chef makes bbq pasta" << endl;
     }
-    void makeSpecialDish(){
+    void makeSpecialDish() {
         cout << "The chef makes chicken parm" << endl;
     }
 };
 
 
-// declare statement
+// function declaration
 void functions_below(const string &name, int age);
 
-int main_1()
-{
+int main() {
     // using namespace std; -- only valid for this function.
     // there is no need a statement when we define the function above the main function.
     // but if we define the function below the main funcion, we then need a declare statement, like:
@@ -521,10 +506,8 @@ int main_1()
 }
 
 
-void functions_below(const string &name, int age){
-
+void functions_below(const string &name, int age) {
     cout << "Hello " << name << "you are" << age;
-
 }
 
 
