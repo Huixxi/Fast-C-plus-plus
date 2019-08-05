@@ -1,5 +1,5 @@
 # Lesson 1 - Getting Start
-## How To Read
+## How To Read 
 * **IDE**: Integrated Development Environment.
 * **`#include`**: Hash-include, Sharp-include, Pound-include.
 * **`std::cout`**: Standard-c-out, `c`- console. 
