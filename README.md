@@ -28,6 +28,14 @@ int main(){
 First, I assume that you have some basic knowledge of C or C++.  
 Before we start, let's walk through the [Basic Introduction About C++](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/00%20Basic%20C%2B%2B.cpp) roughly to recall some basic and important points. (All the codes in this introduction are from this tutorial video: https://www.youtube.com/watch?v=vLnPwxZdW4Y, I just sort the video content into text form.)
 * Part I, The Basics.
+  * [Lesson 1 - Getting Start](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/01%20Lesson1%20Notes.md)
+  * [Lesson 2 - The Anatomy of a C++ Program](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/01%20Lesson2%20Notes.md)
+  * [Lesson 3 - Using Variables, Declaring Constants](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/01%20Lesson3%20Notes.md)
+  * [Lesson 4 - Managing Arrays and Strings](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/01%20Lesson4%20Notes.md)
+  * [Lesson 5 - Working with Expressions, Statements, and Operators](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/01%20Lesson5%20Notes.md)
+  * [Lesson 6 - Controlling Program Flow](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/01%20Lesson6%20Notes.md)
+  * [Lesson 7 - Organizing Code with Functions](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/01%20Lesson7%20Notes.md)
+  * [Lesson 8 - Pointers and References Explained](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/01%20Lesson8%20Notes.md)
 
 * Part II, Fundamentals of Object-Oriented C++ Programming.
 
