@@ -85,7 +85,7 @@ size of double pointer: 8
 ## Dynamic Memory Allocation and Release with `new` and `delete`
 Pointers being variables that are used to contain memory addresses play a critical role in efficient dynamic memory allocation.  
 **`new`**  
-Note that `new` returns a pointer, and that is the reason it is assigned to one.
+Note that `new` returns a pointer, and that is the reason it is assigned to one.  
 `Type* Pointer = new Type; // request memory for one element`  
 `Type* Pointer = new Type[numElements]; // request memory for numElements`  
 
