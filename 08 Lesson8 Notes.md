@@ -90,7 +90,7 @@ Note that `new` returns a pointer, and that is the reason it is assigned to one.
 `Type* Pointer = new Type[numElements]; // request memory for numElements`  
 
 **`delete`**  
-Remeber to release the memory that requested by `new` with `delete`, otherwise it will cause **Memory Leak**, and only the memory that requested by `new` can be released by `delete`.     
+Remeber to release the memory that requested by `new` with `delete`, otherwise it will cause **Memory Leak**, and only the memory that returned by `new` can be released by `delete`.     
 `delete Pointer; // release memory for one element`  
 `delete[] Pointer; // release block for numElements`
 > Note the usage of `delete[]` when you allocate a block using `new[...]` and `delete` when you allocate just an element using `new`.
