@@ -6,13 +6,9 @@
 
 using namespace std;
 
-// Three ways to use name space
-// using namespace std; -- valid std::* for all methods
-// just valid what you want:
-// using std::cout;
-// using std::endl;
-
+/* ---------Data Types--------- */
 int datatypes() {
+    // ...
     char grade = 'A';
     int age = 50;
     double gpa = 2.3;
@@ -22,7 +18,9 @@ int datatypes() {
     return 0;
 }
 
+/* -----------Strings----------- */
 int working_with_strings() {
+    // ...
     string phrase = "Giraffe Academy"; // index start from 0
     phrase[0] = 'A';
     cout << phrase.length() << endl;
@@ -36,7 +34,9 @@ int working_with_strings() {
     return 0;
 }
 
+/* -----------Numbers----------- */
 int working_with_numbers() {
+    // ...
     cout << 40;
     cout << 5 - 7;
 
@@ -61,7 +61,9 @@ int working_with_numbers() {
     return 0;
 }
 
+/* ------------Input------------ */
 int getting_user_input() {
+    // ...
     int age;  // get int
     char grade;  // get char
 
@@ -80,7 +82,9 @@ int getting_user_input() {
     return 0;
 }
 
+/* ----------Practice1---------- */
 int building_a_calculator() {
+    // ...
     int num1, num2;
     cout << "Enter first number: ";
     cin >> num1;
@@ -93,7 +97,9 @@ int building_a_calculator() {
     return 0;
 }
 
+/* ----------Practice2---------- */
 int building_a_mad_libs_game() {
+    // ...
     string color, pluralNoun, celebrity;
 
     cout << "Enter a color: ";
@@ -110,7 +116,9 @@ int building_a_mad_libs_game() {
     return 0;
 }
 
+/* ------------Arrays------------ */
 int arrays() {
+    // ...
     int luckyNums[] = {4, 8, 15, 16, 23, 42};  // index start from 0;
 
     cout << luckyNums[0];
@@ -125,12 +133,14 @@ int arrays() {
     return 0;
 }
 
+/* -----------Functions---------- */
 // If we want to execute the function, we should 'calling it' in main function.
 // function with parameters.
 void functions_above(string name, int age) {
     cout << "Hello " << name << "you are" << age;
 }
 
+/* ------------Return------------ */
 // return type: int, char, double,
 double return_statement(double num) {
     //cube
@@ -139,7 +149,9 @@ double return_statement(double num) {
     return result;  // get a doubel type value back;
 }
 
+/* ------------If_Else------------ */
 int if_statements(bool isMale, bool isTall) {
+    // ...
     if(isMale){
         cout << "You are a male";
     }
@@ -185,6 +197,7 @@ int more_if_statement(int num1, int num2, int num3) {
     return result;
 }
 
+/* ------------Switch------------ */
 string switch_statement(int dayNum) {
     // get day of week
     string dayName;
@@ -225,8 +238,9 @@ string switch_statement(int dayNum) {
     return dayName;
 }
 
-
+/* ----------While_Loop---------- */
 int while_loops() {
+    // ...
     int index = 1;
     while (index <= 5) {
         cout << index << endl;
@@ -241,8 +255,9 @@ int while_loops() {
     return 0;
 }
 
-
+/* ----------Practice3---------- */
 int building_a_guessing_game() {
+    // ...
     int secretNum = 7;
     int guess;
     int guessCount = 0;
@@ -270,7 +285,9 @@ int building_a_guessing_game() {
     return 0;
 }
 
+/* -----------For_Loop----------- */
 int for_loops() {
+    // ...
     int nums[] = {1, 2, 5, 7, 3};
     for (int num : nums) {  // use use range based for loop instead
         cout << num << endl;
@@ -283,8 +300,9 @@ int for_loops() {
     return 0;
 }
 
-
+/* ----------Practice4---------- */
 int exponent_function(int baseNum, int powNum) {
+    // ...
     int result = 1;
     for (int i = 0; i < powNum; i++) {
         result *= baseNum;  // result = result * baseNum;
@@ -293,8 +311,9 @@ int exponent_function(int baseNum, int powNum) {
     return result;
 }
 
-
+/* ----------Nested_Loop---------- */
 int twod_array_nested_loops() {  // nested loop: a loop inside a loop;
+    // ...
     int numberGrid[3][2] = {
             {1, 2},
             {3, 4},
@@ -313,6 +332,7 @@ int twod_array_nested_loops() {  // nested loop: a loop inside a loop;
     return 0;
 }
 
+/* -----------Comments----------- */
 int comments() {
     // here is a comment, only works on a single line;
 
@@ -328,9 +348,9 @@ int comments() {
     return 0;
 }
 
-
+/* -----------Pointers----------- */
 int pointers() {
-
+    // ...
     int age = 19;
     double gpa = 2.7;
     string name = "Mike";
@@ -348,10 +368,9 @@ int pointers() {
     return 0;
 }
 
-// ClassesObjects
+/* -------Classes & Objects------- */
+// To represent any objects in real world, we need to create a class(a new data type).
 class Book {
-    // To represent any objects in real world, we need to create a class(a new data type).
-    // book class
 public:
     string title;
     string author;
@@ -394,7 +413,7 @@ public:
     }
 };
 
-
+/* -------Setter & Getter------- */
 class Movie {
 private:
     string rating;
@@ -408,7 +427,7 @@ public:
         director = move(aDirector);
         setRating(move(aRating));
     }
-
+    // Setter 
     void setRating(string aRating) {
         if (aRating == "G" || aRating == "PG" || aRating == "PG-13" || aRating == "R") {
             rating = move(aRating);
@@ -417,13 +436,13 @@ public:
             rating = "NR";
         }
     }
-
+    // Getter
     string getRating() {
         return rating;
     }
 };
 
-
+/* ---------Inheritance--------- */
 class Chef {
 public:
     void makeChicken() {
@@ -448,14 +467,13 @@ public:
 };
 
 
-// function declaration
+// declaration for the functions defined below the main function.
 void functions_below(const string &name, int age);
 
 int main() {
-    // using namespace std; -- only valid for this function.
     // there is no need a statement when we define the function above the main function.
     // but if we define the function below the main funcion, we then need a declare statement, like:
-    //
+    
     functions_above("Mike", 60);  // This tells c++ that I want to execute all of the codes that inside this function;
     functions_below("Tom", 45);
     functions_below("Jim", 13);
@@ -505,9 +523,8 @@ int main() {
     return 0;
 }
 
-
+/* ----------Function Defined Below the main()---------- */
 void functions_below(const string &name, int age) {
     cout << "Hello " << name << "you are" << age;
 }
-
 
