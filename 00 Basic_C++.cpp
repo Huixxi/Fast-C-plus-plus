@@ -1,3 +1,6 @@
+/* --- If you want to run that file, remember to change its name to main.cpp ---*/
+/* Sorted from this tutorial video: https://www.youtube.com/watch?v=vLnPwxZdW4Y */
+
 #include <iostream>
 #include <cmath>
 
