@@ -47,7 +47,7 @@ int num = 3;
 cout << &num << endl;
 ```
 
-**Using Pointers to Store Addresses**
+**Using Pointers to Store Addresses**  
 `Type* Pointer = &Variable;`
 
 ```c++
