@@ -35,10 +35,10 @@ value contained in address that contained in numPinter: 3
 
 **Declaring a Pointer**  
 `PointedType * PointerVariableName;`  
-`PointedType * PointerVariableName = NULL; // initializing value (a better choice)`
+`PointedType * PointerVariableName = NULL; // initializing value (a better choice)`  
 for example:
 ```c++
-int *pointsToInt = NULL;  // use NULL to avoid junk value.
+int *pointsToInt = NULL;  // initilized with NULL to avoid junk value.
 ```
 
 **Determining the Address of a Variable Using the Reference Operator (`&`)**
