@@ -86,6 +86,8 @@ int main() {
 ## Abstraction of Data via Keyword `private`
 You have the possibility to allow controlled access to even information declared `private` via methods that you have declared as `public` i.e. `getter` and `setter`.  
 
+___
+
 ## Constructors
 A *`constructor`* is a special function (or method) invoked during the instantiation of a class to construct an object. Just like functions, constructors can also be overloaded.   
 
