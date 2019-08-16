@@ -326,7 +326,7 @@ int main() {
 ```
 Because `GetInstance()` is a static member, it is like a global function that can be invoked without having an object as a handle.
 
-## Class That Prohibits Instantiation on the Stack
+**Class That Prohibits Instantiation on the Stack**  
 The key to ensuring this is declaring the **destructor** `private`:  
 ```c++
 class MonsterDB {
@@ -366,7 +366,7 @@ public:
 };
 ```
 
-## Using Constructors to Convert Types
+**Using Constructors to Convert Types**  
 Using keyword `explicit` before constructor to avoid implicit conversions:  
 ```c++
 class Human {
@@ -380,6 +380,103 @@ then, something like that is not allowed:
 `Human anotherKid = 11; // int converted to Human`  
 ***Read More: https://weblogs.asp.net/kennykerr/Explicit-Constructors***
 
+## `This` Pointer
+`this` is a reserved keyword applicable within the scope of a class and contains the address of the object. In other words, the value of `this` is `&object`. 
 
+## `sizeof()` a Class
+Basically it reports the sum of bytes consumed by each data attribute contained within the class declaration. Note that member functions and their local variables do not play a role in defining the `sizeof()` a class.  
 
+## How `struct` Differs from `class`
+`struct` is treated by a C++ compiler similarly to a `class`. Unless specified, members in a `struct` are `public` by default (`private` for a class), and unless specified, a `struct` features `public` inheritance from a base `struct` (`private` for a class).  
+```c++
+struct Human {
+  // constructor, public by default (as no access specified is mentioned) 
+  Human(const MyString& humansName, int humansAge, bool humansGender) 
+      : name(humansName), age (humansAge), Gender(humansGender) {}
+      
+  int GetAge () {
+    return age; 
+  } 
+  
+private: 
+  int age;
+  bool gender; 
+  MyString name;
+};
+```
+
+## Declaring a `friend` of a `class`
+A class does not permit external access to its data members and methods that are declared `private`. This rule is waived for classes and functions that are disclosed as friend classes or functions, using keyword `friend`.
+```c++
+class Human {
+private:
+  friend void DisplayAge(const Human& person);
+  friend class Utility;
+  int age;
+  
+public:
+  Human(int humanAge) : age(humanAge) {}
+};
+
+void DisplayAge(const Human& person) {
+  cout << persion.age << end;
+}
+
+class Utility {
+public:
+  static void DisplayAge(const Human& person) {
+    cout << persion.age << endl;
+  }
+};
+
+int main() {
+  Human firstMan(13);
+  DisplayAge(firstMan);
+  Utility::DisplayAge(firstMan);
+  
+  return 0;
+}
+```
+
+## `union`: A Special Data Storage Mechanism
+A `union` is a special class type where only one of the non-static data members is active at a time. Often a `union` is used as a member of a `struct` to model a complex data type.  
+**Declaring a Union**  
+```
+union UnionName {
+  Type1 member1; 
+  Type2 member2;
+  ...
+  TypeN memberN; 
+};
+```
+And instantiate and use a `union` like:  
+```
+UnionName unionObject;
+unionObject.member2 = value; // choose member2 as the active member
+```
+Additionally, the `sizeof()` a `union` is always fixed as the size of the largest member contained in the `union`.
+
+## Using Aggregate Initialization on Classes and Structs
+`Type objectName {argument1, ..., argumentN};`  
+```c++
+class Aggregate1 {
+public:
+  int num; 
+  double pi;
+}; 
+struct Aggregate2 {
+  char hello[6];
+  int impYears[3];
+  string world;
+}; 
+
+int main() {
+  Aggregate1 a1{ 2017, 3.14 };
+  Aggregate2 a2{ {'h', 'e', 'l', 'l', 'o'}, {2011, 2014, 2017}, "world"};
+  // Alternatively
+  Aggregate2 a2_2{'h', 'e', 'l', 'l', 'o', '\0', 2011, 2014, 2017, "world"};
+}
+```
+
+## `constexpr` with Classes and Objects
 
