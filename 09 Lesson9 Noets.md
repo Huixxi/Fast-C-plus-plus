@@ -421,13 +421,13 @@ public:
 };
 
 void DisplayAge(const Human& person) {
-  cout << persion.age << end;
+  cout << person.age << end;
 }
 
 class Utility {
 public:
   static void DisplayAge(const Human& person) {
-    cout << persion.age << endl;
+    cout << person.age << endl;
   }
 };
 
