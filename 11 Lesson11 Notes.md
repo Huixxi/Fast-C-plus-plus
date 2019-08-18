@@ -245,3 +245,8 @@ public:
   }
 };
 ```
+
+## Tips
+* DO remember to mark base class functions that need to be overridden by the derived class as virtual.
+* DO remember that pure virtual functions make your class an Abstract Base Class, and these functions must be implemented by a deriving class.
+* DON’T forget to supply your base class with a virtual destructor.
