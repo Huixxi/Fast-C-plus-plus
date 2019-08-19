@@ -24,6 +24,72 @@ returnType operator operatorType () {
 ![](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/images/unary_operator.png)
 
 ## Programming a Unary Increment/Decrement Operator
+```c++
+class Data {
+private:
+  // ...
+public:
+  Data& operator ++ () { // prefix increment
+    ++day;
+    return *this;
+  }
+  
+  Data& operator -- () { // prefix decrement
+    --day;
+    return *this;
+  }
+  
+  Data operator ++ () { // postfix increment 
+    Data copy();
+    ++day;
+    return copy; // copy of instance before increment returned
+  }
+  
+  Data operator -- () { // postfix decrement 
+    Data copy();
+    --day;
+    return copy; // copy of instance before decrement returned
+  }
+  
+  // ...
+};
+```
+
+## Programming Conversion Operators
+If you want to `cout` an intance of a class just like `cout` a `string`, we need to define your own conversion operator.  
+**Syntax**  
+`/*explicit*/ operator conversion-type-id () {}`
+**Getting cout to work with an instance of type by adding an operator that returns a `const char*` version::**  
+```c++
+#include <sstream> // new include for ostringstream
+
+class Data {
+private:
+  // ...
+  string dateInString;
+public:
+  // ...
+  operator const char* () {
+    ostringstream formattedDate; // assists string construction 
+    formattedDate << month << " / " << day << " / " << year;
+    dateInString = formattedDate.str();
+    return dateInString.c_str();
+  }
+};
+```
+Note that such assignments cause implicit conversions. Using `explicit` would force the programmer to assert his intention to convert using a cast:  
+```c++
+explicit operator const char*() {
+  // conversion code here 
+}
+
+string strHoliday(static_cast<const char*>(Holiday));
+```
+**Read More: https://en.cppreference.com/w/cpp/language/cast_operator**
+
+
+
+
 
 
 
