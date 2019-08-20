@@ -38,6 +38,12 @@ Before we start, let's walk through the [Basic Introduction About C++](https://g
   * [Lesson 8 - Pointers and References Explained](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/08%20Lesson8%20Notes.md)
 
 * Part II, Fundamentals of Object-Oriented C++ Programming.
+  * [Lesson 9 - Classes and Objects](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/09%20Lesson9%20Notes.md)
+  * [Lesson 10 - Implementing Inheritance](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/10%20Lesson10%20Notes.md)
+  * [Lesson 11 - Polymorphism](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/11%20Lesson11%20Notes.md)
+  * [Lesson 12 - Operator Types and Operator Overloading](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/12%20Lesson12%20Notes.md)
+  * [Lesson 13 - Casting Operators](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/13%20Lesson13%20Notes.md)
+  * [Lesson 14 - An Introduction to Macros and Templates](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/14%20Lesson14%20Notes.md)
 
 * Part III, Learning the Standard Template Library (STL).
 
