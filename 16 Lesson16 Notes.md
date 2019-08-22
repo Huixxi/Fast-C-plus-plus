@@ -1,4 +1,4 @@
-# The STL String Class
+# Lesson 16 - The STL String Class
 
 ## The Need for String Manipulation Classes
 Typically, to generate a string, the following two syntaxes have their own flaws:  
