@@ -58,7 +58,7 @@ for(auto charLocator = stlString.cbegin(); charLocator != stlString.cend(); ++ c
 Alias of one of the fundamental **unsigned integer types**.  
 `size_t` is the type returned by the `sizeof` operator and is widely used in the standard library to represent sizes and counts.  
 
-## Concatenating One String to Another with `append()`
+## Concatenating One String to Another Using `append()`
 ```c++
 string sampleStr1 ("Hello"); 
 string sampleStr2 (" String! ");
@@ -68,7 +68,7 @@ sampleStr1 += sampleStr2;
 sampleStr1.append (sampleStr2); // (overloaded for char* too)
 ```
 
-## Finding a Character or Substring in a String with `find()`
+## Finding a Character or Substring in a String Using `find()`
 ```c++
 // Find substring "day" in sampleStr, starting at position 0 
 size_t charPos = sampleStr.find("day", 0);
@@ -86,7 +86,7 @@ while(charPos != string::npos) {
 }
 ```
 
-## Truncating an STL `string` with `erase()`
+## Truncating an STL `string` Using `erase()`
 `string sampleStr ("Hello String! Wake up to a beautiful day!");`  
 * `sampleStr.erase (13, 28);  // Hello String!`
 * `sampleStr.erase (iCharS);  // iterator points to a specific character`
@@ -95,7 +95,7 @@ while(charPos != string::npos) {
 ## String Reversal with `reverse()`
 `reverse (sampleStr.begin (), sampleStr.end ());`
 
-## String Case Conversion with `transform()`
+## String Case Conversion Using `transform()`
 ```c++
 string inStr = "Hello World!";
 // switch to upper case
