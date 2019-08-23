@@ -80,6 +80,15 @@ In the above example, `element` is a `const_iterator`, you can see that, `++elem
 // Erase one element at the end
 integers.pop_back();
 ```
+> You can also use `erase()` member function which we will talk about in 'Lesson18 Notes'.  
+
+When you need to empty an STL container such as a `vector` or a `deque`, that is, delete all elements contained in it, you would use member function `clear()`, and to check whether the container is empty, you should use member function `empty()`.
+```c++
+integers.clear();
+if(intDeque.empty()) {
+  cout << "The container is now empty" << endl;
+}
+```
 
 ## Understanding the Concepts of Size and Capacity
 `cout << "Size: " << integers.size ();`  
