@@ -71,3 +71,80 @@ if (pairFound != mapIntToStr.end()) {
 }
 ```
 
+## Finding Elements in an STL `multimap`
+In the case of a `multiset` you would use `multiset::count()` to find the number of values corresponding to a key and increment the iterator to access those consequently placed values.
+```c++
+auto pairFound = mmapIntToStr.find(key);
+// Check if find() succeeded 
+if(pairFound != mmapIntToStr.end()) {
+  // Find the number of pairs that have the same supplied key 
+  size_t numPairsInMap = mmapIntToStr.count(key);
+  for(size_t counter = 0; counter < numPairsInMap; ++counter) {
+    cout << "Key: " << pairFound->first;  // key 
+    cout << ", Value [" << counter << "] = "; 
+    cout << pairFound->second << endl;  // value 
+    ++pairFound;   
+  } 
+} 
+else 
+  cout << "Element not found in the multimap";
+```
+
+## Erasing Elements from an STL `map` or `multimap`
+```c++
+multimap<int, string> mmapIntToStr;
+mmapIntToStr.insert(make_pair(1000, "Thousand"));
+mmapIntToStr.insert(make_pair(45, "Forty Five"));
+mmapIntToStr.insert(make_pair(-1, "Minus One"));
+mmapIntToStr.insert(make_pair(1000, "Thousand"));
+
+// Erasing an element with key as -1 from the multimap
+auto numPairsErased = mmapIntToStr.erase(-1);
+
+// Erase an element given an iterator from the multimap
+auto pair = mmapIntToStr.find(45);
+if(pair != mmapIntToStr.end()) {
+  mmapIntToStr.erase(pair);
+}
+// Erase a range from the multimap...
+mmapIntToStr.erase(mmapIntToStr.lower_bound(1000), mmapIntToStr.upper_bound(1000));
+```
+
+## Supplying a Custom Sort Predicate
+To supply a different sort criterion than what the key-type supports, you would typically program a binary predicate in the form of a `class` or a `struct` using `operator()`:
+```c++
+template<typename keyType> 
+struct Predicate {
+  bool operator()(const keyType& key1, const keyType& key2) {
+    // your sort priority logic here 
+  }
+};
+```
+
+# STL’s Hash Table-Based Key-Value Container
+The Hash Table is one such container that promises constant-time insertions and near-constant–time searches (in most cases), given a key.  
+To use class `std::unordered_map`, include header: `#include<unordered_map>`  
+
+## How Hash Tables Work
+A hash table can be viewed as a collection of key-value pairs, where given a key, the table can find a value. A hash table stores key-value pairs in **buckets**, each bucket having an index that defines its relative position in the table.  
+`Index = HashFunction(key, TableSize);`  
+When performing a `find()` given a key, `HashFunction()` is used once again to determine the position of the element and the table returns the value at the position.
+
+## Using `unordered_map` and `unordered_multimap`
+Not too different from `std::map` and `std::multimap`, respectively. *Instantiation*, *insertion*, and *find* follow similar patterns. Yet, one important feature of an `unordered_map` is the availability of a hash function that is responsible for deciding the sorting order:  
+`unordered_map<int, string>::hasher hFn = umapIntToStr.hash_function();`  
+You can view the priority assigned to a key by invoking the hash function for a key:   
+`size_t hashingVal = hFn(1000);  // 1000 is a key`  
+As an unordered_map stores key-value pairs in buckets, it does an automatic **load balancing** when the number of elements in the map reach or tend to reach the number of buckets in the same:  
+```
+cout << "Load factor: " << umapIntToStr.load_factor() << endl; 
+cout << "Max load factor = " << umapIntToStr.max_load_factor() << endl; 
+cout << "Max bucket count = " << umapIntToStr.max_bucket_count() << endl;
+```
+> `load_factor()` is an indicator of the extent to which buckets in the `unordered_map` have been filled. When `load_factor()` exceeds `max_load_factor()` due to an insertion, the map reorganizes itself to increase the number of available buckets and rebuilds the hash table.
+
+## Tips
+* DO use an `unordered_map` or `unordered_multimap` when constant-time insertions and searches are absolutely essential (typically when the number of elements is very high).
+
+
+
