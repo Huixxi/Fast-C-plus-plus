@@ -64,7 +64,7 @@ You should also not cross the bounds of the container. A safer alternative is to
 ## Accessing Elements in a Vector Using Pointer Semantics(Iterators)
 ```c++
 auto element = integers.cbegin();  // a const_iterator, different from .begin() which is just a iterator
-// vector <int>::const_iterator element = integers.cbegin ();
+// vector<int>::const_iterator element = integers.cbegin ();
 
 while(element != integers.end()) {
   size_t index = distance (integers.cbegin (), element);
