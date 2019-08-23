@@ -46,6 +46,12 @@ Before we start, let's walk through the [Basic Introduction About C++](https://g
   * [Lesson 14 - An Introduction to Macros and Templates](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/14%20Lesson14%20Notes.md)
 
 * Part III, Learning the Standard Template Library (STL).
+  * [Lesson 15 - An Introduction to the Standard Template Library](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/15%20Lesson15%20Notes.md)
+  * [Lesson 16 - STL String Class](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/16%20Lesson16%20Notes.md)
+  * [Lesson 17 - STL Dynamic Array Classes](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/17%20Lesson17%20Notes.md)
+  * [Lesson 18 - STL List Classes](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/18%20Lesson18%20Notes.md)
+  * [Lesson 19 - STL Set Classes](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/19%20Lesson19%20Notes.md)
+  * [Lesson 20 - STL Map Classes](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/20%20Lesson20%20Notes.md)
 
 * Part IV, More STL.
 
