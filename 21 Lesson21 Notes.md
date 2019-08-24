@@ -127,9 +127,9 @@ public:
     string str2LowerCase; 
     str2LowerCase.resize (str2.size());
     transform(str2.begin(), str2.end(), str2LowerCase.begin(), ::tolower);
+    return (str1LowerCase < str2LowerCase);
   }
-  return (str1LowerCase < str2LowerCase);
-}
+};
 
 int main() {
   // ...
