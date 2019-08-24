@@ -5,7 +5,7 @@ STL algorithms can be broadly classified into two types:
 * mutating algorithms.
 
 ## Non-Mutating Algorithms
-Algorithms that change neither the order nor the contents of a container are called *non-mutating algorithms*.  
+*Non-mutating algorithms* are those that change neither the order nor the contents of a container are called.  
 * *Counting Algorithms*:   
 `count()`, `count_if()`
 * *Search Algorithms*:   
@@ -14,7 +14,7 @@ Algorithms that change neither the order nor the contents of a container are cal
 `equal()`, `mismatch()`, `lexicographical_compare()`
 
 ## Mutating Algorithms
-Mutating algorithms are those that change the contents or the order of the sequence they are operating on.
+*Mutating algorithms* are those that change the contents or the order of the sequence they are operating on.
 * *Initialization Algorithms*:  
 `fill()`, `fill_n()`, `generate()`, `generate_n()`
 * *Modifying Algorithms*:  
