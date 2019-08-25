@@ -75,6 +75,7 @@ void MakeFishSwim(Fish aFish)  // note parameter type, not a reference, but a co
 Carp freshWaterFish;
 MakeFishSwim(freshWaterFish);  // Carp will be 'sliced' to Fish 
 // Slicing: only the Fish part of Carp is sent to 
+```
 ```c++
 template<typename T>  
 class deepcopy_smart_ptr {
