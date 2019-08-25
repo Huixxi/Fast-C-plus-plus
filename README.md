@@ -62,8 +62,10 @@ Before we start, let's walk through the [Basic Introduction About C++](https://g
   * [Lesson 25 - Working with Bit Flags Using STL](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/Part%20IV%20More%20STL/25%20Lesson25%20Notes.md)
   
 * Part V, Advanced C++ Concepts.
-
-
+  * [Lesson 26 - Understanding Smart Pointers](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/Part%20V%20Advanced%20C%2B%2B%20Concepts/26%20Lesson26%20Notes.md)
+  * [Lesson 27 - Using Streams for Input and Output](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/Part%20V%20Advanced%20C%2B%2B%20Concepts/27%20Lesson27%20Notes.md)
+  * [Lesson 28 - Exception Handling]()
+  * [Lesson 29 - Going Forward]()
 
 
 
