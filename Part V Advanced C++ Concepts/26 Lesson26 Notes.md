@@ -1,5 +1,5 @@
 # Lesson 26 - Understanding Smart Pointers
-when managing memory on the heap (or the free store), we can make use of smart pointers. A smart pointer in C++ is a class with overloaded operators, which behaves like a conventional pointer.
+When managing memory on the heap (or the free store), we can make use of smart pointers. A smart pointer in C++ is a class with overloaded operators, which behaves like a conventional pointer.
 
 ## The Problem with Using Conventional (Raw) Pointers
 For example:
@@ -64,7 +64,7 @@ Classification of smart pointers is actually a classification of their memory re
 ## Deep copy
 In a smart pointer that implements deep copy, every smart pointer instance holds a complete copy of the object that is being managed. Whenever the smart pointer is copied, the object pointed to is also copied (thus, deep copy). When the smart pointer goes out of scope, it releases the memory it points to (via the destructor).   
 Its advantage becomes apparent in the treatment of polymorphic objects, the slicing problem:
-```
+```c++
 // Example of Slicing When Passing Polymorphic Objects by Value 
 // Fish is a base class for Tuna and Carp, Fish::Swim() is virtual
 void MakeFishSwim(Fish aFish)  // note parameter type, not a reference, but a copied value
