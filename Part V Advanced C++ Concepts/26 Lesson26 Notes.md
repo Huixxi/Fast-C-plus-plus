@@ -103,7 +103,65 @@ deepcopy_smart_ptr<Carp> freshWaterFish(new Carp);
 MakeFishSwim (freshWaterFish); // Carp will not be 'sliced'
 ```
 
-## Copy on Write Mechanism
+## Copy on Write Mechanism(*COW*)
+Sharing pointers until the first attempt at writing to the object is made. On the first attempt at invoking a non-`const` function, a COW pointer typically creates a copy of the object on which the non-const function is invoked, whereas other instances of the pointer continue sharing the source object.
+
+## Reference-Counted Smart Pointers
+Reference counting in general is a mechanism that keeps a count of the number of users of an object. When the count reduces to zero, the object is released.  
+There are at least two popular ways to keep this count: 
+* Reference count maintained in the object being pointed to (*intrusive reference counting*)
+* Reference count maintained by the pointer class in a shared object (on the free store)
+
+## Reference-Linked Smart Pointers
+Reference-linked smart pointers don’t count the number of references using the object, they just need to know when the number comes down to zero so that the object can be released. They are called `reference-linked` because their implementation is based on a double-linked list.
+
+## Destructive Copy Destructive
+Destructive copy is a mechanism where a smart pointer, when copied, transfers complete ownership of the object being handled to the destination and resets itself:
+```
+destructive_copy_smartptr<SampleClass> smartPtr (new SampleClass()); 
+SomeFunc (smartPtr);  // Ownership transferred to SomeFunc 
+// Don't use smartPtr in the caller any more!
+```
+They ensure that at any point in time, only one active pointer points to an object.
+```c++
+template<typename T> 
+class destructivecopy_ptr {
+private:
+  T* object;
+public:
+  destructivecopy_ptr(T* input) : object(input) {}
+  ~destructivecopy_ptr() { delete object; }
+  // copy constructor
+  destructivecopy_ptr(destructivecopy_ptr& source)  // note, cannot be const
+  {
+    // Take ownership on copy
+    object = source.object;
+    // destroy source
+    source.object = 0;
+  }
+  // copy assignment operator
+  destructivecopy_ptr& operator= (destructivecopy_ptr& source)  // note, cannot be const
+  {
+    if (object != source.object) {
+      delete object;
+      object = source.object;
+      source.object = 0;
+    }
+  }
+};
+
+int main() {
+  destructivecopy_ptr<int> num (new int);
+  destructivecopy_ptr<int> copy = num;
+  // num is now invalid
+  return 0;
+}
+```
+
+## Using the `std::unique_ptr`
+`std::unique_ptr` does not allow copy or assignment.  
+To use class `std::unique_ptr`, include header: `#include <memory>`
+
 
 
 
