@@ -159,10 +159,37 @@ int main() {
 ```
 
 ## Using the `std::unique_ptr`
-`std::unique_ptr` does not allow copy or assignment.  
+`std::unique_ptr` is a simple smart pointer that with a private copy constructor and assignment operator to disallow copy via passing as an argument to a function by value, or copy via assignment.   
 To use class `std::unique_ptr`, include header: `#include <memory>`
+```c++
+#include <memory>  // include this to use std::unique_ptr 
+class Fish {
+public:
+  Fish() {cout << "Fish: Constructed!" << endl;}
+  ~Fish() {cout << "Fish: Destructed!" << endl;}
+  void Swim() const {cout << "Fish swims in water" << endl;} 
+}; 
+void MakeFishSwim(const unique_ptr<Fish>& inFish) { 
+  inFish->Swim();
+} 
 
+int main() { 
+  unique_ptr<Fish> smartFish(new Fish);
+  smartFish->Swim();
+  MakeFishSwim(smartFish); // OK, as MakeFishSwim accepts reference
 
+  unique_ptr<Fish> copySmartFish; 
+  // copySmartFish = smartFish; // error: operator= is private
+  // move semantics
+  unique_ptr<Fish> sameFish(std::move(smartFish)); 
+  // smartFish is empty henceforth
+  return 0;
+}
+```
+> When writing applications using multiple threads, evaluate using `std::shared_ptr` and `std::weak_ptr`
+
+## Popular Smart Pointer Libraries
+Boost (www.boost.org) supplies you with some well-tested and well-documented smart pointer classes, among many other useful utility classes. You can find further information on Boost smart pointers and downloads at http://www.boost.org/libs/smart_ptr/smart_ptr.htm.
 
 
 
