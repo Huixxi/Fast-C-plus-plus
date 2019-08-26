@@ -64,8 +64,8 @@ Before we start, let's walk through the [Basic Introduction About C++](https://g
 * Part V, Advanced C++ Concepts.
   * [Lesson 26 - Understanding Smart Pointers](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/Part%20V%20Advanced%20C%2B%2B%20Concepts/26%20Lesson26%20Notes.md)
   * [Lesson 27 - Using Streams for Input and Output](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/Part%20V%20Advanced%20C%2B%2B%20Concepts/27%20Lesson27%20Notes.md)
-  * [Lesson 28 - Exception Handling]()
-  * [Lesson 29 - Going Forward]()
+  * [Lesson 28 - Exception Handling](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/Part%20V%20Advanced%20C%2B%2B%20Concepts/28%20Lesson28%20Notes.md)
+  * [Lesson 29 - Going Forward](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/Part%20V%20Advanced%20C%2B%2B%20Concepts/29%20Lesson29%20Notes.md)
 
 
 
