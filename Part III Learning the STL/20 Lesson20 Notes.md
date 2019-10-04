@@ -14,6 +14,10 @@ The difference between the `map` and the `multimap` is that only the latter allo
 std::map<int, string> mapIntToStr; 
 std::multimap<int, string> mmapIntToStr;
 ```
+You can initialize it directly with:  
+```c++
+mapIntToStr = {{1, "String1"}, {2, "String2"}, {3, "String3"}}
+```
 If you want to change this behavior, you supply a predicate that is a `class` or a `struct` that implements `operator()`.
 ```c++
 template<typename keyType>
