@@ -1,6 +1,6 @@
 # Lesson 11 - Polymorphism
 ```c++
-clss Fish {
+class Fish {
 public:
   void Swim() {}
   // ...
