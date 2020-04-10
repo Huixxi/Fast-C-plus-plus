@@ -68,7 +68,8 @@ struct iterator_traits {
 ```
 * `value_type`
 * `difference_type`  
-Which is used to represent the distance of two iterators, so it can be used to represent a container's largest size, like STL's `count()`.  
+Which is used to represent the distance of two iterators, so it can be used to represent a container's largest size, like STL's `count()`.(Also should "partial specialization" for "naive pointers" and "pointer-to-const".)  
+> 
 ```c++
 template <class I, class T>
 typename iterator_traits<I>::difference_type count(I first, I last, const T* value) {
@@ -79,4 +80,23 @@ typename iterator_traits<I>::difference_type count(I first, I last, const T* val
     return n;
 }
 ```
-Also should "partial specialization" for "naive pointers" and "pointer-to-const".  
+
+* `reference_type`  
+There are two kinds of iterators: constant iterators, e.g. `const int* pic` & mutable iterators, e.g. `int* pi`.   
+> 
+```c++
+int* pi = new int(5);
+const int* pic = new int(9);
+*pi = 7;  // *pi is a lvalue, allowed assignment.
+*pic = 1;  // *pic is a rvalue, don't allow assignment.
+```
+
+* `pointer_type`
+```c++
+    Item& operator*() const {return *ptr};  // Item& is ListIter's reference type
+    Item* operator->() const {return ptr};  // Item* is ListIter's pointer type
+```
+
+* `iterator_category`
+
+
