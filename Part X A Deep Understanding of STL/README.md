@@ -71,24 +71,24 @@ struct iterator_traits {
 Which is used to represent the distance of two iterators, so it can be used to represent a container's largest size, like STL's `count()`.(Also should "partial specialization" for "naive pointers" and "pointer-to-const".)  
 > 
 ```c++
-template <class I, class T>
-typename iterator_traits<I>::difference_type count(I first, I last, const T* value) {
-    typename iterator_traits<I>::difference_type n = 0;
-    for(; first != last; ++first) 
-        if(*first == value)
-            ++n;
-    return n;
-}
+    template <class I, class T>
+    typename iterator_traits<I>::difference_type count(I first, I last, const T* value) {
+        typename iterator_traits<I>::difference_type n = 0;
+        for(; first != last; ++first) 
+            if(*first == value)
+                ++n;
+        return n;
+    }
 ```
 
 * `reference_type`  
 There are two kinds of iterators: constant iterators, e.g. `const int* pic` & mutable iterators, e.g. `int* pi`.   
 > 
 ```c++
-int* pi = new int(5);
-const int* pic = new int(9);
-*pi = 7;  // *pi is a lvalue, allowed assignment.
-*pic = 1;  // *pic is a rvalue, don't allow assignment.
+    int* pi = new int(5);
+    const int* pic = new int(9);
+    *pi = 7;  // *pi is a lvalue, allowed assignment.
+    *pic = 1;  // *pic is a rvalue, don't allow assignment.
 ```
 
 * `pointer_type`
@@ -98,5 +98,9 @@ const int* pic = new int(9);
 ```
 
 * `iterator_category`
-
+  * Input Iterator (read only)
+  * Output Iterator (write only)
+  * Forward Iterator (allow operations like `replace()`
+  * Bidirectional Iterator (can bidirectionally move)
+  * Random Access Iterator (covers pointer's all arithmetic abilities, like `p+n, p-n, p[n], p1-p2, p1<p2`
 
