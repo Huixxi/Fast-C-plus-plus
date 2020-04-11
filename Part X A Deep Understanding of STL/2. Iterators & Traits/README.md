@@ -135,7 +135,7 @@ __distance(RandomAccessIterator first, RandomAccessIterator last, random_access_
   
 ```c++
 template <class InputIterator>
-inline iterator_traits<RandomAccessIterator>::difference_type
+inline iterator_traits<InputIterator>::difference_type
 distance(InputIterator first, InputIterator last) {
     __distance(first, last, iterator_traits<InputIterator>::intertor_category());
 }
