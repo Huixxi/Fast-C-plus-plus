@@ -59,11 +59,9 @@ struct iterator_traits {
     typedef typename I::difference_type difference_type;
     typedef typename I::pointer pointer;
     typedef typename I::reference reference;
-    
-    // add
-    typedef typename I::iterator_category iterator_category;
 }
 ```
+
 * `value_type`
 
 * `difference_type`  
