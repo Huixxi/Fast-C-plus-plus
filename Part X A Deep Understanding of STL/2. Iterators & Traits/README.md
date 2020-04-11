@@ -104,12 +104,12 @@ Item* operator->() const {return ptr};  // Item* is ListIter's pointer type
   * Random Access Iterator (covers pointer's all arithmetic abilities, like `p+n, p-n, p[n], p1-p2, p1<p2`
 
 E.g.1 **`advanced()`**   
-* Use tag types to do overloaded resolution
-  * struct input_iterator_tag { };
-  * struct output_iterator_tag { };
-  * struct forward_iterator_tag : public input_iterator_tag { };
-  * struct bidirectional_iterator_tag : public forward_iterator_tag { };
-  * struct random_access_iterator_tag : bidirectional_iterator_tag { };
+Use tag types to do overloaded resolution
+* struct input_iterator_tag { };
+* struct output_iterator_tag { };
+* struct forward_iterator_tag : public input_iterator_tag { };
+* struct bidirectional_iterator_tag : public forward_iterator_tag { };
+* struct random_access_iterator_tag : bidirectional_iterator_tag { };
 
 ```c++
 template <class InputIterator, class Distance>
