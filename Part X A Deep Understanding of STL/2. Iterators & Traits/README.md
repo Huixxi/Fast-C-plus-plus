@@ -158,3 +158,5 @@ struct iterator {
     typedef Reference reference;
 };
 ```
+
+### 2.7 SGI STL's `_types_traits`
