@@ -1,6 +1,6 @@
 ## Sequence Containers
-Any particular "Data Structures" is designed to implement a particular algorithm.  
-Those "Data Sturctures" can be classified into: **sequence** and **associatice**.  
+Any particular "Data Structures" is designed to implement a particular algorithm. Those "Data Sturctures" can be classified into: **sequence** and **associatice**.  
+
 **Sequence Containers**  
 * array(build-in)
 * vector
