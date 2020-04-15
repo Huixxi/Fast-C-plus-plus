@@ -28,7 +28,7 @@ ___
 
 ___
 
-### vector
+## vector
 **vector's source code: [stl_vector.h](https://github.com/Huixxi/Fast-C-plus-plus/blob/master/Part%20X%20A%20Deep%20Understanding%20of%20STL/3.%20Sequence%20Containers/stl_vector.h)**  
 
 **vector's iterator**  
@@ -42,7 +42,7 @@ When adding a new element `s`, if exceed the current capacity, the capacity will
 **vector's element operator: pop_back, erase, clear, insert**  
 
 
-### list
+## list
 **list's iterator**  
 STL list is a double linked-list, so list's iterator is `bidirectional_iterator`.   
 
@@ -78,17 +78,17 @@ protected:
 }
 ```
 
-### stack
+## stack
 stack don't have a iterator, it's a FILO container adapter, that you can only fetch the element from top, which means traverse is not allowed.  
 ```c++
 template <class T, class Sequence = deque<T>> 
 
 ```
 
-### queue
+## queue
 queue don't have a iterator, it's a FIFO container adapter.
 
 
-### heap
+## heap
 
 
