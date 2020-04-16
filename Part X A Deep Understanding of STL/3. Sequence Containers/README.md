@@ -14,18 +14,6 @@ ___
   * stack (contains a deque)(adapter)
   * queue (contains a deque)(adapter)
 
-**Associatice Containers**  
-* RB-tree (non-public)
-  * set (contains an RB-tree)
-  * map (contains an RB-tree)
-  * multiset (contains an RB-tree)
-  * multimap (contains an RB-tree)
-* hashtable (non-std)
-  * hash_set (contains a hashtable)(non-std)
-  * hash_map (contains a hashtable)(non-std)
-  * hash_multiset (contains a hashtable)(non-std)
-  * hash_multimap (contains a hashtable)(non-std)
-
 ___
 
 ## vector
