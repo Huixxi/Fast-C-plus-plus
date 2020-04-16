@@ -87,8 +87,36 @@ template <class T, class Sequence = deque<T>>
 
 ## queue
 queue don't have a iterator, it's a FIFO container adapter.
+```c++
+template <class T, class Sequence = deque<T>> 
+
+```
+
+## heap(implicit representation)
+heap don't have a iterator. It acts as `priority_queue`'s assistant. **binary max heap** is suit for `priority_queue`'s underlying mechanisms. **binary search tree** can also be its underlyint mechanisms but it's too complex to be implemented and **binary search tree** requires its input should has enough randomness. The complexity is better between `queue` and `binary search tree`.    
+
+**binary heap** is a kind of **complete binary tree**. The way that use **array** to represent a **complete binary tree** is called **implicit representation**, but heap requires dynamic changing size, so vector is a better choice.   
 
 
-## heap
+**heap algorithm**  
+* `push_heap` 
+* `pop_heap`: put the largest element to its vector's tail.
+* `sort_heap`: looping `pop_heap`.
+* `make_heap`: turn a sequence data to a valid heap.
+
+
+## priority_queue
+```c++
+template <class T, class Sequence = vector<T>, class Compare = less<typename Sequence::value_type>> 
+
+```
+
+
+## slist(single list)
+slist's iterator is a `forward_iterator`
+
+
+
+
 
 
