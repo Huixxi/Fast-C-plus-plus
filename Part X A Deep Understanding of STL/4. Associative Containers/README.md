@@ -75,10 +75,49 @@ class multimap {
 * 二次探测（quadratic probing），用于解决主集团问题（primary clustering）。若hash function计算出新元素的位置为H，且这一位置实际上已被占用，我们则依序尝试`H+1^2, H+2^2, H+3^2, .. H+i^2`. 而不是像线性探测那样`H+1, H+2, H+3, .. H+i`。当表格大小设置为质数，且永远保持负载系数低于0.5，则每插入一个新元素所需要探测的次数不多于2。此方法可以消除主集团，但可能造成次集团，可使用复式散列解决。 
 * 开链算法（separate chaining），在每个表格元素中维护一个list，hash function为我们分配一个list，我们在这个list上执行元素插入，删除等操作。
 
+```c++
+template <class Value, class Key, class HashFcn, class ExtractKey, class EqualKey, class Alloc = alloc>
+class hashtable {
+    // ...
+    insert_unique() { // ... } or insert_equal() { // ... }
+}
+```
 
+### hash_set
+```c++
+template <class Value, class HashFcn = hash<Value>, class ExtractKey = equal_to<Value>, class Alloc = alloc>
+class hash_set {
+    // ...
+    insert_unique() { // ... } 
+}
+```
 
+### hash_map
+```c++
+template <class Key, class T, class HashFcn = hash<Value>, class ExtractKey = equal_to<Value>, class Alloc = alloc>
+class hash_map {
+    // ...
+    insert_unique() { // ... } 
+}
+```
 
+### hash_multiset
+```c++
+template <class Value, class HashFcn = hash<Value>, class ExtractKey = equal_to<Value>, class Alloc = alloc>
+class hash_multiset {
+    // ...
+    insert_equal() { // ... } 
+}
+```
 
+### hash_multimap
+```c++
+template <class Key, class T, class HashFcn = hash<Value>, class ExtractKey = equal_to<Value>, class Alloc = alloc>
+class hash_map {
+    // ...
+    insert_equal() { // ... } 
+}
+```
 
 
 
