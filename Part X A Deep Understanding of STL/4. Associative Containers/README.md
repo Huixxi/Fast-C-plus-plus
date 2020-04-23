@@ -31,5 +31,45 @@ ___
 
 According to rule 4, the newly insert node must be red; according to rule 3, the newly insert node's parent node must be black.  
 
+### Set
+```c++
+template <class Key, class Compare = less<Key>, class Alloc = alloc>  // 缺省采用递增排序
+class set {
+    // ...
+    insert_unique() { // ... }
+};
+```
+
+### map
+```c++
+template <class Key, class Compare = less<Key>, class Alloc = alloc>  // 缺省采用递增排序
+class map {
+    // ...
+    insert_unique() { // ... }
+};
+```
+
+### multiset
+```c++
+template <class Key, class Compare = less<Key>, class Alloc = alloc>  // 缺省采用递增排序
+class multiset {
+    // ...
+    insert_equal() { // ... }
+};
+```
+
+### multimap
+```c++
+template <class Key, class Compare = less<Key>, class Alloc = alloc>  // 缺省采用递增排序
+class multimap {
+    // ...
+    insert_equal() { // ... }
+};
+```
+
+## hashtable(散列表)
+
+
+
 
 
