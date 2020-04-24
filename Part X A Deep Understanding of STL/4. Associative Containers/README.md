@@ -126,7 +126,7 @@ String 类的实现。
 
 
 ## Skiplist(跳表)
-跳表的实现。
+跳表的[设计(design)](https://skiplist.readthedocs.io/en/latest/design.html)与[实现(implementation)](https://gist.github.com/unsuthee/4116663)。
 
 
 
