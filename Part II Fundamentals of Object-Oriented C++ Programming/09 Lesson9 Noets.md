@@ -241,9 +241,9 @@ public:
   }
   
   MyString(const MyString& copySource) { // Copy constructor
-    if(copyString.buffer != NULL) {
-      buffer = new char[strlen(copyString.buffer) + 1];
-      strcpy(buffer, copyString.buffer);
+    if(copySource.buffer != NULL) {
+      buffer = new char[strlen(copySource.buffer) + 1];
+      strcpy(buffer, copySource.buffer);
     }
     else {
       buffer = NULL;
