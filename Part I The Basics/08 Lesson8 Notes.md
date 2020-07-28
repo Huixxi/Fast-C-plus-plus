@@ -147,8 +147,8 @@ The value of a const-variable cannot be changed, and therefore it cannot be used
 * The address contained in the pointer is constant and cannot be changed, yet the data at that address can be changed:  
 ```c++
 int* const pDaysInMonth = &daysInMonth;
-`*pDaysInMonth = 31; // OK! Data pointed to can be changed
-`pDaysInMonth = &daysInLunarMonth; // Not OK! Cannot change address!
+*pDaysInMonth = 31; // OK! Data pointed to can be changed
+pDaysInMonth = &daysInLunarMonth; // Not OK! Cannot change address!
 ```
 * Data pointed to is constant and cannot be changed, yet the address contained in the pointer can be changed—that is, the pointer can also point elsewhere:  
 ```c++
