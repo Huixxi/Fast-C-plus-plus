@@ -145,17 +145,23 @@ The original pointer address returned by `new` during allocation needs to be use
 ## Using the `const` Keyword on Pointers
 The value of a const-variable cannot be changed, and therefore it cannot be used as an **l-value**.
 * The address contained in the pointer is constant and cannot be changed, yet the data at that address can be changed:  
-`int* const pDaysInMonth = &daysInMonth;`  
-`*pDaysInMonth = 31; // OK! Data pointed to can be changed`  
-`pDaysInMonth = &daysInLunarMonth; // Not OK! Cannot change address!`
+```c++
+int* const pDaysInMonth = &daysInMonth;
+`*pDaysInMonth = 31; // OK! Data pointed to can be changed
+`pDaysInMonth = &daysInLunarMonth; // Not OK! Cannot change address!
+```
 * Data pointed to is constant and cannot be changed, yet the address contained in the pointer can be changed—that is, the pointer can also point elsewhere:  
-`const int* pointsToInt = &hoursInDay;`  
-`pointsToInt = &monthsInYear; // OK!`  
-`*pointsToInt = 13; // Not OK! Cannot change data being pointed to`
+```c++
+const int* pointsToInt = &hoursInDay;  
+pointsToInt = &monthsInYear; // OK!  
+*pointsToInt = 13; // Not OK! Cannot change data being pointed to
+```
 * Both the address contained in the pointer and the value being pointed to are constant and cannot be changed (most restrictive variant):  
-`const int* const pHoursInDay = &hoursInDay;`  
-`*pHoursInDay = 25; // Not OK! Cannot change data being pointed to`  
-`pHoursInDay = &daysInMonth; // Not OK! Cannot change address`
+```c++
+const int* const pHoursInDay = &hoursInDay;  
+*pHoursInDay = 25; // Not OK! Cannot change data being pointed to 
+pHoursInDay = &daysInMonth; // Not OK! Cannot change address
+```
 
 ## Passing Pointers to Functions Pointers
 Pointers are an effective way to pass memory space that contains relevant data for functions to work on.
@@ -163,21 +169,21 @@ Pointers are an effective way to pass memory space that contains relevant data f
 void CalcArea(const double* const ptrPi, // const pointer to const data
               const double* const ptrRadius, // i.e. no changes allowed
               double* const ptrArea) { // can change data pointed to
-  if (ptrPi && ptrRadius && ptrArea) { // use to check whether there is NULL address
-    *ptrArea = (*ptrPi) * (*ptrRadius) * (*ptrRadius);
-  }
+    if (ptrPi && ptrRadius && ptrArea) { // use to check whether there is NULL address
+        *ptrArea = (*ptrPi) * (*ptrRadius) * (*ptrRadius);
+    }
 }
 
 int main() {
-  const double Pi = 3.1416;
-  cout << "Enter radius of circle: "; double radius = 0;
-  cin >> radius;
-  double area = 0;
-  // Note that there much pass in the variables' addresses.
-  CalcArea (&Pi, &radius, &area);
-  cout << "Area is = " << area << endl;
-  
-  return 0; 
+    const double Pi = 3.1416;
+    cout << "Enter radius of circle: "; double radius = 0;
+    cin >> radius;
+    double area = 0;
+    // Note that there much pass in the variables' addresses.
+    CalcArea (&Pi, &radius, &area);
+    cout << "Area is = " << area << endl;
+
+    return 0; 
 }
 ```
 
@@ -231,7 +237,7 @@ The copying step can be quite an overhead if the argument in question consumes a
 It is often important to ensure that the called function cannot change the value of the variable at the caller’s end. A const reference parameter cannot be used as an l-value.
 ```c++
 void GetSquare(const int& number, int& result) {
-  result = number * number;
+    result = number * number;
 }
 ```
 
