@@ -56,6 +56,16 @@ A lambda expression always starts with square brackets:
 `}`  
 > If your lambda expression spans multiple lines, you are required to supply an explicit return type.
 
+We can capture external variables from enclosing scope by three ways:
+* Capture by reference
+* Capture by value
+* Capture by both (mixed capture)
+
+Syntax used for capturing variables :
+* `[&]` : capture all external variable by reference
+* `[=]` : capture all external variable by value
+* `[a, &b]` : capture a by value and b by reference
+
 ## Lambda Expression for a Binary Function
 `[...](Type1& param1Name, Type2& param2Name) { // lambda code here; }`  
 ```c++
