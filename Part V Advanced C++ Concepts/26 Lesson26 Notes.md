@@ -34,7 +34,7 @@ private:
 
 public:
   smart_pointer(T* pData) : rawPtr(pData) {}  // constructor
-  ~smart_pointer() { delete rawPtr; };  // destructor, allowing for automatic memory release.
+  ~smart_pointer() { delete rawPtr; }  // destructor, allowing for automatic memory release.
   
   // copy constructor
   smart_pointer(const smart_pointer& anotherSP);  
